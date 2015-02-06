@@ -1,0 +1,35 @@
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-md-offset-3" id="topRow">
+<h3> Students List </h3>
+    <span class="label">
+        Name Filter: 
+    </span>
+    <div class="form-group form-inline">
+        <label for="namefil">Name Filter:</label> 
+        <input type="text" ng-model="nameFilter.firstName" class="form-control" name="namefil"/>
+    </div>
+    
+<table class="table table-striped table-bordered">
+    <tr>
+        <th class="cursorPointer center" ng-click="doSort('studentNumber')">Student Number</th>
+        <th class="cursorPointer center" ng-click="doSort('firstName')">First Name</th>
+        <th class="center">View</th>
+        <th class="center">Delete</th>
+        <th class="center">Add</th>
+    </tr>
+    <tr ng-repeat="stud in studentList | filter:nameFilter | orderBy:sortBy:reverse" class="repeat-animation">
+        <td class="center">{{stud.studentNumber}}</td>
+        <td class="center">{{stud.firstName}}</td>
+        <td class="center"><a href="#/studentDetails/{{stud.studentNumber}}">View Details</a></td>
+        <td class="center"><span class="glyphicon glyphicon-remove  " id="deleteIcon" ng-click="deleteStudent(stud.studentNumber)"></span></td>
+        <td class="center"><a href="#/studentAdd">Add Student</a></td>
+    </tr>
+</table>
+
+         <div>
+             <label>Total number of students :</label>{{studentList.length}}
+         </div>
+</div>
+</div>
+</div>

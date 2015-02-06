@@ -1,0 +1,12 @@
+#deleteIcon {
+    color: red; 
+    cursor: pointer;
+    
+}
+.center{
+    text-align:  center;
+}
+
+.cursorPointer{
+   cursor: pointer;
+}

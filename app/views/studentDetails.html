@@ -1,0 +1,41 @@
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-md-offset-3" id="topRow">
+<h3>{{studentDetails.firstName}}'s Details</h3>
+    
+<table class="table table-striped table-bordered" >
+    <tr>
+        <th>Student Number</th>
+        <td>{{studentDetails.studentNumber}}</td>
+    </tr>
+    <tr>
+        <th>First Name</th>
+        <td>{{studentDetails.firstName}}</td>
+    </tr>
+    <tr>
+        <th>Last Name</th>
+        <td>{{studentDetails.lastName}}</td>
+    </tr>
+    <tr>
+        <th>Preferred Name</th>
+        <td>{{studentDetails.preferredName}}</td>
+    </tr>
+    <tr>
+        <th>Gender</th>
+        <td>{{studentDetails.gender}}</td>
+    </tr>
+    <tr>
+        <th>Birth Date</th>
+        <td>{{studentDetails.birthDate}}</td></tr>
+    <tr>
+        <th>Disability</th>
+        <td>{{studentDetails.disability | yesNo}}</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>{{studentDetails.email}}</td>
+    </tr>
+</table>
+</div>
+</div>
+</div>
